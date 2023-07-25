@@ -16,9 +16,10 @@ def calculator(operator, int1 , int2):
 def evaluate_goto(line):
     statement = line.split()
     if statement[1] == 'calc':
-        return calculator(statement[2], int(statement[3]) , int(statement[3]))
+        return calculator(statement[2], int(statement[3]) , int(statement[4]))
     else:
         return int(statement[1]) - 1
+    
 # Step 2 
 # with open('M1_calc_step2.txt', 'r+') as calc_input:
 #     lines = calc_input.readlines()
@@ -29,7 +30,7 @@ def evaluate_goto(line):
 #     print('Total: {:.2f}'.format(total))
 
 # Step 3
-with open('M1_calc_step3.txt', 'r+') as calc_input:
+with open('M1_general_purpose_coding_1/M1_calc_step3.txt', 'r+') as calc_input:
     lines = calc_input.readlines()
 
     read_lines = []
