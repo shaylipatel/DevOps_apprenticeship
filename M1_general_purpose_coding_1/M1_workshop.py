@@ -8,6 +8,8 @@ def calculator(operator, int1 , int2):
             return int1 * int2
         elif operator == '/':
             return int1 // int2
+        elif operator == '^':
+            return int1 ** int2
         else:
             return "Error: Operator not found"
     except Exception as e:
@@ -30,19 +32,21 @@ def evaluate_goto(line):
 #     print('Total: {:.2f}'.format(total))
 
 # Step 3
-with open('M1_general_purpose_coding_1/M1_calc_step3.txt', 'r+') as calc_input:
-    lines = calc_input.readlines()
+# with open('M1_general_purpose_coding_1/M1_calc_step3.txt', 'r+') as calc_input:
+#     lines = calc_input.readlines()
 
-    read_lines = []
-    line_number = 0
-    while True:
-        current_line = lines[line_number]
-        print(current_line)
-        if current_line in read_lines:
-            print(f"Line number {line_number + 1}: {current_line}")
-            break
-        line_number = evaluate_goto(current_line)
-        read_lines.append(current_line)
+#     read_lines = []
+#     line_number = 0
+#     while True:
+#         current_line = lines[line_number]
+#         print(current_line)
+#         if current_line in read_lines:
+#             print(f"Line number {line_number + 1}: {current_line}")
+#             break
+#         line_number = evaluate_goto(current_line)
+#         read_lines.append(current_line)
     
+# Step 4 - add pow-operater to Step 1
 
+print(calculator('^', 2, 5))
 
