@@ -1,0 +1,8 @@
+import random
+
+points = 0 
+
+dynamite_left = 100
+
+def play_round():
+    
